@@ -3,15 +3,15 @@
 Projet 2 du parcours développeur Front-end de OpenClassrooms --> Transformez une maquette en site web
 
 
-# Objectifs :
+# Objectifs
 + Intégrer la maquette d'un d'un site internet pour créer un prototype de celle-ci en utilisant HTML et CSS
 
-# Fonctionnalités :
+# Fonctionnalités
 + Un champ de recherche qui permet au utilisateur d'y inscrire du texte (Bouton de recherche non fonctionnel)
 + Un système de carte d’hébergement ou d’activité cliquable dans son intégralité (Lien vide)
 + Utilisation des ancres pour pour naviguer d'une section à une autre
 
-# Contraintes techniques :
+# Contraintes techniques
 + Le prototype doit être responsive, deux maquettes sont fournie pour la version desktop et mobile
 + Le site doit aussi être adapté aux tablettes, l'adaptation est libre
 + Choix de la taille et des formats d'image à intégrer
@@ -27,3 +27,8 @@ Projet 2 du parcours développeur Front-end de OpenClassrooms --> Transformez un
 + Le code doit être versionné à l'aide de git
 + Le HTML et le CSS doit être séparé
 
+# Compétences évaluées
++ Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
++ Mettre en place son environnement Front-End
++ Intégrer du contenu conformément à une maquette
++ Implémenter une interface responsive
