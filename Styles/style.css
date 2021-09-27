@@ -1,0 +1,73 @@
+
+/* GENERAL CSS STYLE */
+
+:root {
+    --primary-color: #0065FC;
+    --secondary-color: #DEEBFF;
+    --background-color: #F2F2F2;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: min(1000px, calc(70% + 100px));
+}
+
+/* GENERAL TEXT STYLE */
+
+h1 {
+    letter-spacing: 2px;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+}
+
+p {
+    line-height: 1.2;
+    font-size: max(1rem, 1vw);
+}
+
+/* NAVIGATION BAR STYLE */
+
+.NavBar {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.NavBar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.NavBar ul li {
+    padding: 16px 4px 4px 4px;
+    margin: 0 12px 12px 12px;
+}
+
+.NavBar ul li:hover {
+    padding-top: 15px;
+    color: var(--primary-color);
+    border-top: solid 1px var(--primary-color);
+}
+
+/* SIGN UP / IN STYLE */
+
+.Sign {
+    margin-top: 16px;
+}
+
+.Sign a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 4px 4px 4px;
+    margin: 0 12px 12px 12px;
+}
+
+/* LOGO STYLE */
+
+.Logo {
+    margin: 4px;
+}

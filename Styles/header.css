@@ -1,0 +1,8 @@
+
+/* GENERAL HEADER STYLE */
+
+#HeaderSection, #HeaderMenu {
+    display: flex;
+    justify-content: space-between;
+}
+
