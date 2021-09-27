@@ -5,6 +5,7 @@
     <title>Reservia</title>
     <link href="Styles/style.css" rel="stylesheet">
     <link href="Styles/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -27,9 +28,20 @@
 </header>
 
 <section id="SearchSection">
+    <h1>Trouvez votre hébergement pour  des vacances de rêves</h1>
+    <p>En plein centre ville ou en pleine nature</p>
     <form class="Form">
+        <span><i class="fas fa-map-marker-alt"></i></span>
+        <!--suppress HtmlFormInputWithoutLabel -->
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit">Rechercher</button>
     </form>
     <section class="Filters">
+        <h2>Filtres</h2>
+        <div class="FilterElem">
+            <span><i class="fas fa-money-bill-wave"></i></span>
+            <p><stong>Économique</stong></p>
+        </div>
     </section>
 </section>
 

@@ -20,7 +20,12 @@ body {
 
 h1 {
     letter-spacing: 2px;
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-size: clamp(1.2rem, 1.5vw,1.7rem);
+}
+
+h2 {
+    letter-spacing: 2px;
+    font-size: clamp(1rem, 1.2vw,1.5rem);
 }
 
 p {
@@ -31,7 +36,7 @@ p {
 /* NAVIGATION BAR STYLE */
 
 .NavBar {
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
 .NavBar ul {
