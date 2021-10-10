@@ -2,6 +2,8 @@
 
 Projet 2 du parcours développeur Front-end de OpenClassrooms --> Transformez une maquette en site web
 
+Github pages : https://drolz.github.io/BenoitStempin_2_27082021/
+
 
 # Objectifs
 + Intégrer la maquette d'un d'un site internet pour créer un prototype de celle-ci en utilisant HTML et CSS
