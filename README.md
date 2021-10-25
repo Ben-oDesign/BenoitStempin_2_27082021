@@ -2,7 +2,7 @@
 
 Projet 2 du parcours développeur Front-end de OpenClassrooms --> Transformez une maquette en site web
 
-Github pages : https://drolz.github.io/BenoitStempin_2_27082021/
+Github pages : https://ben-odesign.github.io/BenoitStempin_2_27082021/
 
 
 # Objectifs
