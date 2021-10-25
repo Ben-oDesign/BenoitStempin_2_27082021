@@ -1,5 +1,36 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Logo.................Logo elements.
+ * Filter...............Filter elements.
+ * Card.................Card elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
 
-/* GENERAL CSS STYLE */
+/*------------------------------------*\
+  #GLOBAL-SETTINGS
+\*------------------------------------*/
 
 :root {
     --primary-color: #0065FC;
@@ -8,29 +39,33 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
-    margin: 0 auto;
-    width: min(1000px, calc(70% + 100px));
+    margin: 0 54px;
 }
 
-/* GENERAL TEXT STYLE */
+/*------------------------------------*\
+  #HEADING-BASE
+\*------------------------------------*/
 
 h1 {
-    letter-spacing: 2px;
-    font-size: clamp(1.2rem, 1.5vw,1.7rem);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 h2 {
-    letter-spacing: 2px;
-    font-size: clamp(1rem, 1.2vw,1.5rem);
+    font-size: 1rem;
+    font-weight: normal;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 p {
-    line-height: 1.2;
-    font-size: max(1rem, 1vw);
+    font-size: 1rem;
 }
 
 /* NAVIGATION BAR STYLE */
@@ -39,22 +74,59 @@ p {
     font-size: clamp(1rem, 1.2vw, 1.5rem);
 }
 
-.NavBar ul {
+.NavBar-ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-.NavBar ul li {
+.NavBar-ul-li {
     padding: 16px 4px 4px 4px;
     margin: 0 12px 12px 12px;
 }
 
-.NavBar ul li:hover {
+.NavBar-ul-li:hover {
     padding-top: 15px;
     color: var(--primary-color);
     border-top: solid 1px var(--primary-color);
+}
+/* SEARCH BAR STYLE */
+
+.SearchBar {
+    display: inline-flex;
+}
+
+.SearchBar-icon-background {
+    display: flex;
+    height: 46px;
+    width: 46px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: var(--background-color);
+}
+
+.SearchBar-icon {
+    margin: auto;
+}
+
+.SearchBar-input {
+    border: solid 1px var(--background-color);
+    border-right: none;
+    padding: 8px;
+    width: 250px;
+    margin: 0;
+}
+
+.SearchBar-button {
+    background-color: var(--primary-color);
+    border: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 8px 16px;
+    margin: 0;
+    font-size: 1em;
+    color: white;
 }
 
 /* SIGN UP / IN STYLE */
@@ -63,7 +135,7 @@ p {
     margin-top: 16px;
 }
 
-.Sign a {
+.Sign-a {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
@@ -71,8 +143,174 @@ p {
     margin: 0 12px 12px 12px;
 }
 
-/* LOGO STYLE */
+/*------------------------------------*\
+  #LOGO-COMPONENTS
+\*------------------------------------*/
 
 .Logo {
     margin: 4px;
+}
+
+/*------------------------------------*\
+  #FILTER-COMPONENTS
+\*------------------------------------*/
+
+.Filter {
+    align-items: center;
+    display: flex;
+    height: 42px;
+    width: fit-content;
+    margin: 4px 12px;
+    padding-right: 14px;
+    border: solid 2px var(--background-color);
+    border-left: none;
+    border-radius: 50px;
+}
+
+.Filter--IconContainer {
+    display: flex;
+    position: relative;
+    width: 46px;
+    height: 46px;
+    margin-right: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.Filter--Icon {
+    color: var(--primary-color);
+    margin: auto;
+}
+
+.Filter--Mention {
+    font-size: 1.2em;
+    margin-left: 4px;
+    align-self: center;
+}
+
+/*------------------------------------*\
+  #CARD-COMPONENTS
+\*------------------------------------*/
+
+.Card {
+    border-radius: 15px;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 0 14px gray;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.Card--PictureContainer {
+    margin: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.Card--TextContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    margin-left: 12px;
+    margin-bottom: 4px;
+    padding-right: 24px;
+}
+
+.Card--StarContainer {
+    margin-top: auto;
+    margin-bottom: 4px;
+}
+
+.Card--Picture {
+    width: initial;
+    height: initial;
+    position: relative;
+}
+
+    .Card--Picture__LightTop { Top: -25% }
+
+    .Card--Picture__Center { top: -50%; }
+
+    .Card--Picture__Bottom { top: -115%; }
+
+    .Card--Picture__With100 { width: 100% }
+
+    .Card--Picture__Height100 { height: 100% }
+
+.Card--Title, .Card--Price,
+.Card--Star {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.Card--Title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Card--Price,
+.Card--Star {
+    font-size: 0.8rem;
+}
+    .Card--Star__Enable {
+        color: var(--primary-color);
+    }
+
+    .Card--Star__Disable {
+        color: var(--background-color);
+    }
+
+.CardHosting {
+    width: 224px;
+    height: fit-content;
+    padding: 4px;
+}
+
+    .CardHosting > .Card--PictureContainer {
+        width: 100%;
+        height: 110px;
+        margin-right: 8px;
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+        justify-content: center;
+    }
+
+    .CardHosting--Popular {
+        flex-direction: row;
+        height: 134px;
+        width: 324px;
+    }
+
+        .CardHosting--Popular > .Card--PictureContainer {
+            border-top-left-radius: 13px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 13px;
+            height: 100%;
+            width: 45%;
+        }
+
+        .CardHosting--Popular > .Card--TextContainer {
+            width: 55%;
+        }
+
+/*------------------------------------*\
+#CARDCONTAINER-COMPONENTS
+\*------------------------------------*/
+
+#HostingSection {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    border-radius: 17px;
+    width: 62%;
+    padding: 16px;
+}
+
+.CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
 }

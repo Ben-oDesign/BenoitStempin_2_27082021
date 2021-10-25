@@ -1,3 +1,33 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Logo.................Logo elements.
+ * Filter...............Filter elements.
+ * Card.................Card elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
 
 /* GENERAL HEADER STYLE */
 
@@ -6,3 +36,21 @@
     justify-content: space-between;
 }
 
+#SearchSection h1 {
+    font-weight: bold;
+}
+
+/*------------------------------------*\
+  #FILTER-SECTION
+\*------------------------------------*/
+
+#FilterSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 34px 0;
+    align-content: center;
+}
+
+.FilterSection--title {
+    margin-right: 34px;
+}

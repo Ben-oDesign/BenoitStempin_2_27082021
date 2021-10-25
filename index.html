@@ -6,95 +6,258 @@
     <link href="Styles/style.css" rel="stylesheet">
     <link href="Styles/header.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header id="HeaderSection">
-    <figure class="Logo">
-        <img src="Resources/Logo/Reservia.svg" alt="Logo">
-        <figcaption hidden>Logo Reservia</figcaption>
-    </figure>
-    <div id="HeaderMenu">
-        <nav class="NavBar">
-            <ul>
-                <li>Hébergements</li>
-                <li>Activités</li>
-            </ul>
-        </nav>
-        <div class="Sign">
-            <a href="#">S'inscrire</a>
+    <header id="HeaderSection">
+        <figure class="Logo">
+            <img src="Resources/Logo/Reservia.svg" alt="Logo">
+            <figcaption hidden>Logo Reservia</figcaption>
+        </figure>
+        <div id="HeaderMenu">
+            <nav class="NavBar">
+                <ul class="NavBar-ul">
+                    <li class="NavBar-ul-li">Hébergements</li>
+                    <li class="NavBar-ul-li">Activités</li>
+                </ul>
+            </nav>
+            <div class="Sign">
+                <a class="Sign-a" href="#">S'inscrire</a>
+            </div>
         </div>
-    </div>
-</header>
-
-<section id="SearchSection">
-    <h1>Trouvez votre hébergement pour  des vacances de rêves</h1>
-    <p>En plein centre ville ou en pleine nature</p>
-    <form class="Form">
-        <span><i class="fas fa-map-marker-alt"></i></span>
-        <!--suppress HtmlFormInputWithoutLabel -->
-        <input type="text" placeholder="Search.." name="search">
-        <button type="submit">Rechercher</button>
-    </form>
-    <section class="Filters">
-        <h2>Filtres</h2>
-        <div class="FilterElem">
-            <span><i class="fas fa-money-bill-wave"></i></span>
-            <p><stong>Économique</stong></p>
-        </div>
-    </section>
-</section>
-
-<section id="HostingSection">
-    <header>
-        <h1>Hébergements à Marseille</h1>
     </header>
-    <section>
-        <div class="VerticalHostingCard">
-            <img src="" alt="">
-            <h1 class="Title"></h1>
-            <p class="Price"></p>
-            <p class="Rating"></p> <!-- check library to star rating -->
-        </div>
+
+    <section id="SearchSection">
+
+        <hgroup>
+            <h1>Trouvez votre hébergement pour  des vacances de rêves</h1>
+            <h2>En plein centre ville ou en pleine nature</h2>
+        </hgroup>
+
+        <form class="SearchBar">
+            <div class="SearchBar-icon-background">
+                <i class="fas fa-map-marker-alt SearchBar-icon"></i>
+            </div>
+            <!--suppress HtmlFormInputWithoutLabel -->
+            <input class="SearchBar-input" type="text" placeholder="Rechercher.." name="search">
+            <button class="SearchBar-button" type="submit">Rechercher</button>
+        </form>
+
+        <section id="FilterSection">
+            <h1 class="FilterSection--title">Filtres</h1>
+            <div class="Filter">
+                <div class="Filter--IconContainer">
+                    <i class="fa fa-money-bill-wave Filter--Icon"></i>
+                </div>
+                <p class="Filter--Mention"><strong>Économique</strong></p>
+            </div>
+            <div class="Filter">
+                <div class="Filter--IconContainer">
+                    <i class="fa fa-child Filter--Icon"></i>
+                </div>
+                <p class="Filter--Mention"><strong>Famillial</strong></p>
+            </div>
+            <div class="Filter">
+                <div class="Filter--IconContainer">
+                    <i class="fa fa-heart Filter--Icon"></i>
+                </div>
+                <p class="Filter--Mention"><strong>Romantique</strong></p>
+            </div>
+            <div class="Filter">
+                <div class="Filter--IconContainer">
+                    <i class="fa fa-dog Filter--Icon"></i>
+                </div>
+                <p class="Filter--Mention"><strong>Animaux autorisés</strong></p>
+            </div>
+        </section>
+
     </section>
-    <footer>
-        <p>Afficher plus</p>
+
+    <section id="HostingSection">
+        <header>
+            <h1>Hébergements à Marseille</h1>
+        </header>
+        <section class="CardContainer CardContainer__Hosting">
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100" src="Resources/Hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Auberge la Cannebière</h1>
+                    <p class="Card--Price">Nuit à partir de 25€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100 Card--Picture__LightTop" src="Resources/Hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel du port</h1>
+                    <p class="Card--Price">Nuit à partir de 52€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100 Card--Picture__LightTop" src="Resources/Hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel Les mouettes</h1>
+                    <p class="Card--Price">Nuit à partir de 76€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100 Card--Picture__Center" src="Resources/Hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel de la mer</h1>
+                    <p class="Card--Price">Nuit à partir de 46€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100" src="Resources/Hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Auberge Le Panier</h1>
+                    <p class="Card--Price">Nuit à partir de 23€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100 Card--Picture__Bottom" src="Resources/Hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel chez Amina</h1>
+                    <p class="Card--Price">Nuit à partir de 96€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Afficher plus</p>
+        </footer>
+    </section>
+
+    <section id="MostPopularSection">
+        <header>
+            <h1>Les plus populaires</h1>
+            <p class="RatingAnalyse"></p> <!-- check library to star rating -->
+        </header>
+        <section>
+            <div class="[ Card ]    [ CardHosting CardHosting--Popular ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__Height100" src="Resources/Hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel Le soleil du matin</h1>
+                    <p class="Card--Price">Nuit à partir de 128€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting CardHosting--Popular ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__Height100" src="Resources/Hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Au coeur de l'eau Chambre d'hôtes</h1>
+                    <p class="Card--Price">Nuit à partir de 71€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="[ Card ]    [ CardHosting CardHosting--Popular ]">
+                <figure class="Card--PictureContainer">
+                    <img class="Card--Picture Card--Picture__With100 Card--Picture__LightTop" src="Resources/Hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
+                </figure>
+                <div class="Card--TextContainer">
+                    <h1 class="Card--Title">Hôtel Tout bleu et blanc</h1>
+                    <p class="Card--Price">Nuit à partir de 128€</p>
+                    <div class="Card--StarContainer">
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Enable ]"></i>
+                        <i class="[ fas fa-star ]    [ Card--Star Card--Star__Disable ]"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="ActivitySection">
+        <header>
+            <h1>Activités à Marseille</h1>
+        </header>
+        <section>
+            <div class="VerticalActivityFullCard">
+                <img src="" alt="">
+                <h1 class="Title"></h1>
+            </div>
+        </section>
+    </section>
+
+    <footer id="FooterSection">
+        <section class="FooterContentBlock">
+            <h1>A propos</h1>
+            <a href="#"></a>
+        </section>
     </footer>
-</section>
-
-<section id="MostPopularSection">
-    <header>
-        <h1>Les plus populaires</h1>
-        <p class="RatingAnalyse"></p> <!-- check library to star rating -->
-    </header>
-    <section>
-        <div class="HorizontalHostingCard">
-            <img src="" alt="">
-            <h1 class="Title"></h1>
-            <p class="Price"></p>
-            <p class="Rating"></p> <!-- check library to star rating -->
-        </div>
-    </section>
-</section>
-
-<section id="ActivitySection">
-    <header>
-        <h1>Activités à Marseille</h1>
-    </header>
-    <section>
-        <div class="VerticalActivityFullCard">
-            <img src="" alt="">
-            <h1 class="Title"></h1>
-        </div>
-    </section>
-</section>
-
-<footer id="FooterSection">
-    <section class="FooterContentBlock">
-        <h1>A propos</h1>
-        <a href="#"></a>
-    </section>
-</footer>
 
 </body>
 </html>
