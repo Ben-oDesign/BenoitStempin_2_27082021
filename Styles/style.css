@@ -68,6 +68,15 @@ p {
     font-size: 1rem;
 }
 
+/*------------------------------------*\
+  #HOSTINGSECTIONWRAPPER-WRAPPERS
+\*------------------------------------*/
+
+.HostingSectionWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* NAVIGATION BAR STYLE */
 
 .NavBar {
@@ -279,7 +288,7 @@ p {
     .CardHosting--Popular {
         flex-direction: row;
         height: 134px;
-        width: 324px;
+        width: 354px;
     }
 
         .CardHosting--Popular > .Card--PictureContainer {
@@ -298,13 +307,21 @@ p {
 #CARDCONTAINER-COMPONENTS
 \*------------------------------------*/
 
-#HostingSection {
+#HostingSection,
+#MostPopularSection {
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
     border-radius: 17px;
-    width: 62%;
     padding: 16px;
+}
+
+#HostingSection {
+    width: 61%;
+}
+
+#MostPopularSection {
+    width: 31%;
 }
 
 .CardContainer {
