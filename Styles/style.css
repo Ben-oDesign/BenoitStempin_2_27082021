@@ -43,7 +43,9 @@ html {
 }
 
 body {
-    margin: 0 54px;
+
+    padding: 0 2.5rem;
+    justify-content: center;
 }
 
 /*------------------------------------*\
@@ -73,8 +75,20 @@ p {
 \*------------------------------------*/
 
 .HostingSectionWrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas:
+                "HostingSection HostingSection MostPopularSection"
+                "HostingSection HostingSection MostPopularSection";
+    grid-column-gap: 2.125rem;
+}
+
+@media (max-width: 1440px) {
+    .HostingSectionWrapper {
+        grid-template-areas:
+                "MostPopularSection"
+                "HostingSection";
+        grid-row-gap: 2.125rem;
+    }
 }
 
 /* NAVIGATION BAR STYLE */
@@ -207,7 +221,6 @@ p {
     display: flex;
     box-shadow: 0 0 14px gray;
     flex-direction: column;
-    margin: 16px;
 }
 
 .Card--PictureContainer {
@@ -250,7 +263,7 @@ p {
 .Card--Title, .Card--Price,
 .Card--Star {
     margin-top: 0;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
 }
 
 .Card--Title {
@@ -271,7 +284,7 @@ p {
     }
 
 .CardHosting {
-    width: 224px;
+    min-width: 224px;
     height: fit-content;
     padding: 4px;
 }
@@ -282,13 +295,12 @@ p {
         margin-right: 8px;
         border-top-left-radius: 13px;
         border-top-right-radius: 13px;
-        justify-content: center;
     }
 
     .CardHosting--Popular {
         flex-direction: row;
         height: 134px;
-        width: 354px;
+        min-width: 250px;
     }
 
         .CardHosting--Popular > .Card--PictureContainer {
@@ -296,12 +308,25 @@ p {
             border-top-right-radius: 0;
             border-bottom-left-radius: 13px;
             height: 100%;
-            width: 45%;
+            max-width: 45%;
         }
 
         .CardHosting--Popular > .Card--TextContainer {
             width: 55%;
+            height: fit-content;
         }
+
+@media screen and (max-width: 1427px) {
+
+}
+
+/*------------------------------------*\
+#HEADER-COMPONENTS
+\*------------------------------------*/
+
+.TitleSection {
+    margin-bottom: 2rem;
+}
 
 /*------------------------------------*\
 #CARDCONTAINER-COMPONENTS
@@ -309,25 +334,42 @@ p {
 
 #HostingSection,
 #MostPopularSection {
-    display: flex;
-    flex-direction: column;
     background-color: var(--background-color);
     border-radius: 17px;
-    padding: 16px;
+    padding: 34px;
 }
 
 #HostingSection {
-    width: 61%;
+    grid-area: HostingSection;
 }
 
 #MostPopularSection {
-    width: 31%;
+    grid-area: MostPopularSection;
 }
 
 .CardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2.75rem;
+    grid-row-gap: 2.75rem;
+}
+
+    .CardContainer__Hosting {
+        margin-bottom: 3rem;
+    }
+
+    .CardContainer__Popular {
+        grid-template-columns: 1fr;
+    }
+
+@media (max-width: 1440px) {
+    .CardContainer__Popular {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .CardContainer__Popular {
+        grid-template-columns: 1fr;
+    }
 }
