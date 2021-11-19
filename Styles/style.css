@@ -44,9 +44,10 @@ html {
 
 body {
     margin: auto;
-    padding: 0 2.5rem;
     justify-content: center;
     max-width: 1500px;
+    width: 100%;
+    min-width: min-content;
 }
 
 /*------------------------------------*\
@@ -81,10 +82,19 @@ p {
                 "HostingSection HostingSection MostPopularSection"
                 "HostingSection HostingSection MostPopularSection";
     grid-column-gap: 2.125rem;
+    margin-right: 2.5rem;
     margin-bottom: 2.5rem;
+    margin-left: 2.5rem;
 }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 700px) {
+    .HostingSectionWrapper {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
     .HostingSectionWrapper {
         grid-template-areas:
                 "MostPopularSection"
@@ -93,25 +103,25 @@ p {
     }
 }
 
-/* NAVIGATION BAR STYLE */
+/*------------------------------------*\
+  #HEADERMENU-COMPONENT
+\*------------------------------------*/
 
-.NavBar {
-    font-size: clamp(1rem, 1.2vw, 1.5rem);
-}
-
-.NavBar-ul {
+.NavBar--Wrapper {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-.NavBar-ul-li {
+.NavBar--Link,
+.Sign--Link {
+    font-size: 1rem;
     padding: 16px 4px 4px 4px;
     margin: 0 12px 12px 12px;
 }
 
-.NavBar-ul-li:hover {
+.NavBar--Link:hover {
     padding-top: 15px;
     color: var(--primary-color);
     border-top: solid 1px var(--primary-color);
@@ -135,7 +145,7 @@ p {
     display: inline-flex;
 }
 
-.SearchBar-icon-background {
+.SearchBar--Background {
     display: flex;
     height: 46px;
     width: 46px;
@@ -144,11 +154,11 @@ p {
     background-color: var(--background-color);
 }
 
-.SearchBar-icon {
+.SearchBar--Icon {
     margin: auto;
 }
 
-.SearchBar-input {
+.SearchBar--Input {
     border: solid 1px var(--background-color);
     border-right: none;
     padding: 8px;
@@ -156,7 +166,7 @@ p {
     margin: 0;
 }
 
-.SearchBar-button {
+.SearchBar--Button {
     background-color: var(--primary-color);
     border: none;
     border-top-right-radius: 15px;
@@ -167,13 +177,25 @@ p {
     color: white;
 }
 
+@media screen and (min-width: 700px) {
+    .SearchBar--SearchIcon {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .SearchBar--label {
+        display: none;
+    }
+}
+
 /* SIGN UP / IN STYLE */
 
 .Sign {
     margin-top: 16px;
 }
 
-.Sign-a {
+.Sign--Link {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
@@ -235,11 +257,6 @@ p {
     background-color: white;
     display: flex;
     flex-direction: column;
-    /*grid-template-columns: 1fr;*/
-    /*grid-template-areas:*/
-    /*                "PictureContainer"*/
-    /*                "PictureContainer"*/
-    /*                "TextContainer";*/
     box-shadow: 0 0 14px gray;
 }
 
@@ -311,13 +328,13 @@ p {
     }
 
 .CardHosting {
-    height: fit-content;
+    min-height: fit-content;
     padding: 4px;
 }
 
     .CardHosting > .Card--PictureContainer {
         width: 100%;
-        height: 110px;
+        min-height: 110px;
         margin-right: 8px;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
@@ -342,19 +359,14 @@ p {
             width: 33%;
         }
 
-        .CardHosting--Popular > .Card--TextContainer {
-        }
-
-.CardActivity {
-
-}
-
+@media screen and (min-width: 1300px) {
     .CardActivity__Div1 { grid-area: 1 / 1 / 6 / 2; }
     .CardActivity__Div2 { grid-area: 1 / 2 / 4 / 3; }
     .CardActivity__Div3 { grid-area: 4 / 2 / 6 / 3; }
     .CardActivity__Div4 { grid-area: 1 / 3 / 6 / 4; }
     .CardActivity__Div5 { grid-area: 1 / 4 / 3 / 5; }
     .CardActivity__Div6 { grid-area: 3 / 4 / 6 / 5; }
+}
 
 /*------------------------------------*\
 #HEADER-COMPONENTS
@@ -381,6 +393,7 @@ p {
     padding: 3rem 2.5rem;
     max-width: 1500px;
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
 }
 
     .FooterContainer--ColWrapper {
@@ -401,6 +414,15 @@ p {
             margin-bottom: 1rem;
         }
 
+@media screen and (max-width: 700px){
+    .FooterContainer {
+        grid-template-columns: 1fr;
+    }
+
+        .FooterContainer--ColWrapper {
+            margin-bottom: 2rem;
+        }
+}
 /*------------------------------------*\
 #CARDCONTAINER-COMPONENTS
 \*------------------------------------*/
@@ -423,14 +445,30 @@ p {
 }
 
 #ActivitySection {
+    margin-right: 2.5rem;
     margin-bottom: 2.5rem;
+    margin-left: 2.5rem;
 }
 
 #FooterSection {
     background-color: var(--background-color);
-    position: absolute;
     width: 100%;
     left: 0;
+}
+
+@media screen and (max-width: 700px) {
+    #HostingSection {
+        background-color: white;
+    }
+
+    #MostPopularSection {
+        border-radius: 0;
+    }
+
+    #ActivitySection {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
 }
 
 .CardContainer {
@@ -455,22 +493,29 @@ p {
         grid-template-rows: repeat(5, 3.5rem);
     }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
 
-    .CardContainer {
+    .CardContainer,
+    .CardContainer__Activity {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 12rem);
     }
 
         .CardContainer__Popular {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 12rem);
+            grid-template-rows: repeat(3, 10rem);
         }
+
+
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .CardContainer {
         grid-template-columns: 1fr;
     }
-}
 
+        .CardContainer__Hosting,
+        .CardContainer__Activity {
+            grid-template-rows: repeat(6, 12rem);
+        }
+}

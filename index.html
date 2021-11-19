@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
     <link href="Styles/style.css" rel="stylesheet">
     <link href="Styles/header.css" rel="stylesheet">
@@ -17,15 +18,15 @@
             <img src="Resources/Logo/Reservia.svg" alt="Logo">
             <figcaption hidden>Logo Reservia</figcaption>
         </figure>
-        <div id="HeaderMenu">
+        <div class="HeaderMenu">
             <nav class="NavBar">
-                <ul class="NavBar-ul">
-                    <li class="NavBar-ul-li">Hébergements</li>
-                    <li class="NavBar-ul-li">Activités</li>
+                <ul class="NavBar--Wrapper">
+                    <li class="NavBar--Link">Hébergements</li>
+                    <li class="NavBar--Link">Activités</li>
                 </ul>
             </nav>
             <div class="Sign">
-                <a class="Sign-a" href="#">S'inscrire</a>
+                <a class="Sign--Link" href="#">S'inscrire</a>
             </div>
         </div>
     </header>
@@ -38,12 +39,15 @@
         </hgroup>
 
         <form class="SearchBar">
-            <div class="SearchBar-icon-background">
-                <i class="fas fa-map-marker-alt SearchBar-icon"></i>
+            <div class="SearchBar--Background">
+                <i class="[ fas fa-map-marker-alt ]    [ SearchBar--Icon ]"></i>
             </div>
             <!--suppress HtmlFormInputWithoutLabel -->
-            <input class="SearchBar-input" type="text" placeholder="Rechercher.." name="search">
-            <button class="SearchBar-button" type="submit">Rechercher</button>
+            <input class="SearchBar--Input" type="text" placeholder="Rechercher.." name="search">
+            <button class="SearchBar--Button" type="submit">
+                <i class="[ fas fa-search ]    [ SearchBar--SearchIcon ]"></i>
+                <span class="SearchBar--label">Recherche</span>
+            </button>
         </form>
 
         <section id="FilterSection">

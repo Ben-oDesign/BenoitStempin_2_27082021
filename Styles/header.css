@@ -47,7 +47,7 @@
 #FilterSection {
     display: flex;
     flex-wrap: wrap;
-    margin: 34px 0;
+    margin: 2.125rem 2.5rem;
     align-content: center;
 }
 
