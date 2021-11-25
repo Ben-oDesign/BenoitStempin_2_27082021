@@ -31,10 +31,28 @@
 
 /* GENERAL HEADER STYLE */
 
-#HeaderSection, #HeaderMenu {
-    display: flex;
-    justify-content: space-between;
+#HeaderSection {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas:
+            "Logo . Nav SignNav";
+    margin: 0 2.5rem;
 }
+
+@media screen and (max-width: 700px){
+    #HeaderSection {
+        margin: 2rem 0 0 0;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas:
+                "Logo . SignNav"
+                "Nav Nav Nav";
+    }
+}
+
+/*#HeaderSection, .HeaderMenu {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/
 
 #SearchSection h1 {
     font-weight: bold;
@@ -47,8 +65,15 @@
 #FilterSection {
     display: flex;
     flex-wrap: wrap;
-    margin: 2.125rem 2.5rem;
+    margin: 2.125rem 0;
     align-content: center;
+}
+
+@media screen and (max-width: 700px) {
+    #FilterSection {
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 .FilterSection--title {

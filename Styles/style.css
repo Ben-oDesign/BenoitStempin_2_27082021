@@ -107,24 +107,78 @@ p {
   #HEADERMENU-COMPONENT
 \*------------------------------------*/
 
-.NavBar--Wrapper {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.NavBar {
+    display: inline-flex;
+    grid-area: Nav;
 }
 
-.NavBar--Link,
-.Sign--Link {
-    font-size: 1rem;
-    padding: 16px 4px 4px 4px;
-    margin: 0 12px 12px 12px;
+    .NavBar--Wrapper {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .NavBar--SignNavWrapper { grid-area: SignNav; }
+
+        .NavBar--Elem { display: contents; }
+
+    .NavBar--Link,
+    .NavBar--SignLink {
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 32px 4px 4px 4px;
+        margin: 0 12px 12px 12px;
+    }
+
+    .NavBar--Link {
+        color: black;
+    }
+
+    .NavBar--SignLink {
+        color: var(--primary-color);
+        font-weight: bold;
+    }
+
+@media screen and (max-width: 700px) {
+    .NavBar--SignNavWrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2rem 1.5rem 0 1.5rem;
+    }
+
+    .NavBar--MainNavWrapper {
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
+
+    }
+
+    .NavBar--MainNavWrapper > .NavBar--Elem {
+        width: 50%;
+        display: block;
+        padding-bottom: 1rem;
+        border-bottom: 4px solid var(--background-color);
+    }
+
+    .NavBar--MainNavWrapper > .NavBar--Elem:first-child {
+        border-bottom-color: var(--primary-color);
+    }
+
+    .NavBar--SignLink {
+        padding: 1rem 0 0 0;
+        margin: 0;
+    }
+
 }
 
-.NavBar--Link:hover {
-    padding-top: 15px;
-    color: var(--primary-color);
-    border-top: solid 1px var(--primary-color);
+@media screen and (min-width: 700px) {
+    .NavBar--Link:hover {
+        padding-top: 31px;
+        color: var(--primary-color);
+        border-top: solid 1px var(--primary-color);
+    }
 }
 
 /*------------------------------------*\
@@ -189,26 +243,19 @@ p {
     }
 }
 
-/* SIGN UP / IN STYLE */
-
-.Sign {
-    margin-top: 16px;
-}
-
-.Sign--Link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 4px 4px 4px 4px;
-    margin: 0 12px 12px 12px;
-}
-
 /*------------------------------------*\
   #LOGO-COMPONENTS
 \*------------------------------------*/
 
 .Logo {
-    margin: 4px;
+    margin: auto 4px 4px 4px;
+    grid-area: Logo;
+}
+
+@media screen and (max-width: 700px) {
+    .Logo {
+        margin-left: 1.5rem;
+    }
 }
 
 /*------------------------------------*\
@@ -427,6 +474,10 @@ p {
 #CARDCONTAINER-COMPONENTS
 \*------------------------------------*/
 
+#SearchSection {
+    margin: 0 2.5rem;
+}
+
 #HostingSection,
 #MostPopularSection {
     background-color: var(--background-color);
@@ -457,17 +508,28 @@ p {
 }
 
 @media screen and (max-width: 700px) {
+    #SearchSection {
+        margin: 0 1.5rem;
+    }
+
     #HostingSection {
         background-color: white;
     }
 
+    #HostingSection,
     #MostPopularSection {
+        padding: 0 1.5rem;
+    }
+
+    #MostPopularSection {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
         border-radius: 0;
     }
 
     #ActivitySection {
-        margin-left: 2.5rem;
-        margin-right: 2.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
